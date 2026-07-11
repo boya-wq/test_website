@@ -1,0 +1,881 @@
+<title>VANTAGE — Performance Marketing Agency</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700;900&family=Inter:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg: #0D0D0F;
+  --surface: #141416;
+  --surface-2: #1C1C1F;
+  --text: #F2F1EB;
+  --text-muted: #85847E;
+  --accent: #C8FF2E;
+  --accent-dim: #9ECC00;
+  --border: #252528;
+  --border-2: #333336;
+  --ink-on-accent: #0A0A0B;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    --bg: #F3F2EC;
+    --surface: #E9E8E2;
+    --surface-2: #DDDCD6;
+    --text: #0D0D0F;
+    --text-muted: #6E6D67;
+    --accent: #5A7A00;
+    --accent-dim: #3E5500;
+    --border: #D0CFC9;
+    --border-2: #C0BFB8;
+  }
+}
+:root[data-theme="light"] {
+  --bg: #F3F2EC;
+  --surface: #E9E8E2;
+  --surface-2: #DDDCD6;
+  --text: #0D0D0F;
+  --text-muted: #6E6D67;
+  --accent: #5A7A00;
+  --accent-dim: #3E5500;
+  --border: #D0CFC9;
+  --border-2: #C0BFB8;
+}
+:root[data-theme="dark"] {
+  --bg: #0D0D0F;
+  --surface: #141416;
+  --surface-2: #1C1C1F;
+  --text: #F2F1EB;
+  --text-muted: #85847E;
+  --accent: #C8FF2E;
+  --accent-dim: #9ECC00;
+  --border: #252528;
+  --border-2: #333336;
+  --ink-on-accent: #0A0A0B;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+a { color: inherit; text-decoration: none; }
+
+/* ── NAV ── */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 48px;
+  height: 60px;
+}
+
+.nav-logo {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  font-size: 22px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text);
+}
+
+.nav-links {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+}
+
+.nav-links a {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-muted);
+  letter-spacing: 0.02em;
+  transition: color 0.15s;
+}
+.nav-links a:hover { color: var(--text); }
+
+.nav-cta {
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 20px;
+  border: 1px solid var(--border-2);
+  border-radius: 100px;
+  color: var(--text);
+  transition: border-color 0.15s, background 0.15s;
+  cursor: pointer;
+}
+.nav-cta:hover { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 8%, transparent); }
+
+/* ── HERO ── */
+.hero {
+  padding: 80px 48px 72px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero-eyebrow {
+  font-family: 'DM Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 28px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.hero-eyebrow::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 1px;
+  background: var(--accent);
+}
+
+.hero-headline {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  font-size: clamp(72px, 9vw, 116px);
+  line-height: 0.94;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+  margin-bottom: 40px;
+}
+
+.hl-outline {
+  -webkit-text-stroke: 2px var(--text);
+  color: transparent;
+}
+
+.hl-accent {
+  color: var(--accent);
+}
+
+.hero-sub {
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--text-muted);
+  max-width: 520px;
+  margin-bottom: 44px;
+}
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  background: var(--accent);
+  color: var(--ink-on-accent, #0A0A0B);
+  padding: 14px 32px;
+  border-radius: 100px;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+.btn-primary:hover { opacity: 0.88; }
+
+.btn-ghost {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text);
+  padding: 14px 32px;
+  border-radius: 100px;
+  border: 1px solid var(--border-2);
+  cursor: pointer;
+  transition: border-color 0.15s;
+}
+.btn-ghost:hover { border-color: var(--text-muted); }
+
+/* Hero stats row */
+.hero-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  margin-top: 72px;
+  border-top: 1px solid var(--border);
+  border-left: 1px solid var(--border);
+}
+
+.hero-stat {
+  padding: 28px 24px;
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.hero-stat-num {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  font-size: 42px;
+  color: var(--text);
+  line-height: 1;
+  margin-bottom: 6px;
+  letter-spacing: -0.01em;
+}
+
+.hero-stat-num span {
+  color: var(--accent);
+}
+
+.hero-stat-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+/* ── MARQUEE ── */
+.marquee-wrap {
+  overflow: hidden;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+  padding: 14px 0;
+}
+
+.marquee-track {
+  display: flex;
+  gap: 0;
+  white-space: nowrap;
+  animation: scroll 28s linear infinite;
+  width: max-content;
+}
+
+@keyframes scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.marquee-item {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  padding: 0 32px;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+.marquee-item::after {
+  content: '·';
+  color: var(--accent);
+}
+
+/* ── SERVICES ── */
+.section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 96px 48px;
+}
+
+.section-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 48px;
+  gap: 24px;
+}
+
+.section-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+
+.section-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  font-size: 52px;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+}
+
+.section-link {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+  transition: color 0.15s;
+  padding-bottom: 4px;
+}
+.section-link:hover { color: var(--text); }
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+}
+
+.service-card {
+  background: var(--bg);
+  padding: 40px 36px;
+  transition: background 0.2s;
+  cursor: default;
+  position: relative;
+  overflow: hidden;
+}
+.service-card:hover { background: var(--surface); }
+
+.service-num {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  margin-bottom: 32px;
+}
+
+.service-icon {
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--border-2);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 28px;
+  color: var(--accent);
+  font-size: 20px;
+}
+
+.service-name {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  margin-bottom: 12px;
+}
+
+.service-desc {
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--text-muted);
+}
+
+/* ── STATS ── */
+.stats-section {
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.stats-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 48px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.stats-left .section-label { margin-bottom: 12px; }
+.stats-left .section-title { margin-bottom: 20px; }
+
+.stats-body {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--text-muted);
+  max-width: 380px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+}
+
+.stat-block {
+  background: var(--surface);
+  padding: 32px 28px;
+  transition: background 0.15s;
+}
+.stat-block:hover { background: var(--surface-2); }
+
+.stat-big {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  font-size: 54px;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.stat-big em {
+  color: var(--accent);
+  font-style: normal;
+}
+
+.stat-caption {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* ── CASE STUDY ── */
+.case-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.case-visual {
+  background: var(--accent);
+  min-height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.case-visual-text {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  font-size: 96px;
+  line-height: 0.9;
+  text-transform: uppercase;
+  color: var(--ink-on-accent, #0A0A0B);
+  opacity: 0.18;
+  letter-spacing: -0.02em;
+  user-select: none;
+  pointer-events: none;
+}
+
+.case-label {
+  position: absolute;
+  bottom: 28px;
+  left: 28px;
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-on-accent, #0A0A0B);
+  opacity: 0.7;
+}
+
+.case-content {
+  padding: 48px 44px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.case-tag {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 20px;
+}
+
+.case-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 1.1;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.case-body {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text-muted);
+  margin-bottom: 32px;
+}
+
+.case-result {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  font-size: 48px;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+.case-result em { color: var(--accent); font-style: normal; }
+
+.case-result-label {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 36px;
+}
+
+.case-link {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  letter-spacing: 0.02em;
+  transition: gap 0.2s;
+}
+.case-link:hover { gap: 14px; }
+.case-link::after { content: '→'; color: var(--accent); }
+
+/* ── CTA SECTION ── */
+.cta-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 96px 48px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 48px;
+  border-top: 1px solid var(--border);
+}
+
+.cta-head .section-label { margin-bottom: 14px; }
+
+.cta-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  font-size: 72px;
+  line-height: 0.95;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+}
+
+.cta-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 20px;
+  flex-shrink: 0;
+}
+
+.cta-email {
+  font-family: 'DM Mono', monospace;
+  font-size: 13px;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+}
+
+/* ── FOOTER ── */
+footer {
+  border-top: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 28px 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-logo {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  font-size: 18px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.footer-copy {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  color: var(--text-muted);
+  letter-spacing: 0.06em;
+}
+
+.footer-links {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+}
+
+.footer-links a {
+  font-size: 12px;
+  color: var(--text-muted);
+  transition: color 0.15s;
+}
+.footer-links a:hover { color: var(--text); }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  nav { padding: 0 24px; }
+  .nav-links { display: none; }
+  .hero { padding: 56px 24px 48px; }
+  .hero-stats { grid-template-columns: repeat(2, 1fr); }
+  .section { padding: 64px 24px; }
+  .services-grid { grid-template-columns: 1fr; }
+  .stats-inner { grid-template-columns: 1fr; gap: 48px; }
+  .case-card { grid-template-columns: 1fr; }
+  .cta-section { flex-direction: column; align-items: flex-start; padding: 64px 24px; }
+  .cta-right { align-items: flex-start; }
+  .footer-inner { flex-direction: column; gap: 16px; text-align: center; }
+  .footer-links { flex-wrap: wrap; justify-content: center; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track { animation: none; }
+}
+</style>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">Vantage</a>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#work">Work</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Start a project</a>
+</nav>
+
+<!-- HERO -->
+<main>
+<section class="hero" aria-label="Hero">
+  <p class="hero-eyebrow">Performance Marketing Agency — Est. 2019</p>
+
+  <h1 class="hero-headline">
+    <span class="hl-outline">We make</span><br>
+    brands <span class="hl-accent">win.</span>
+  </h1>
+
+  <p class="hero-sub">
+    Data-driven campaigns that grow revenue, not just impressions. We build the machine, then we run it harder.
+  </p>
+
+  <div class="hero-actions">
+    <a href="#contact" class="btn-primary">Start a project</a>
+    <a href="#work" class="btn-ghost">See our work</a>
+  </div>
+
+  <div class="hero-stats">
+    <div class="hero-stat">
+      <div class="hero-stat-num">$140<span>M+</span></div>
+      <div class="hero-stat-label">Revenue driven</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-num">3.8<span>×</span></div>
+      <div class="hero-stat-label">Average ROAS</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-num">200<span>+</span></div>
+      <div class="hero-stat-label">Brands scaled</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-num">94<span>%</span></div>
+      <div class="hero-stat-label">Client retention</div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-wrap" aria-hidden="true">
+  <div class="marquee-track" id="marquee">
+    <span class="marquee-item">Brand Strategy</span>
+    <span class="marquee-item">Paid Media</span>
+    <span class="marquee-item">SEO &amp; GEO</span>
+    <span class="marquee-item">Content Systems</span>
+    <span class="marquee-item">Analytics</span>
+    <span class="marquee-item">Email Marketing</span>
+    <span class="marquee-item">Conversion Rate Optimization</span>
+    <span class="marquee-item">Creative Direction</span>
+    <span class="marquee-item">Influencer Marketing</span>
+    <span class="marquee-item">Brand Strategy</span>
+    <span class="marquee-item">Paid Media</span>
+    <span class="marquee-item">SEO &amp; GEO</span>
+    <span class="marquee-item">Content Systems</span>
+    <span class="marquee-item">Analytics</span>
+    <span class="marquee-item">Email Marketing</span>
+    <span class="marquee-item">Conversion Rate Optimization</span>
+    <span class="marquee-item">Creative Direction</span>
+    <span class="marquee-item">Influencer Marketing</span>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="section" id="services">
+  <div class="section-header">
+    <div>
+      <p class="section-label">What we do</p>
+      <h2 class="section-title">Our services</h2>
+    </div>
+    <a href="#contact" class="section-link">All services →</a>
+  </div>
+
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="service-num">01</div>
+      <div class="service-icon" aria-hidden="true">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M9.5 3H5a2 2 0 00-2 2v4.5M9.5 3h5M9.5 3v5.5M14.5 3H19a2 2 0 012 2v4.5M14.5 3v5.5M21 9.5V19a2 2 0 01-2 2h-4.5M3 9.5V19a2 2 0 002 2h4.5M9.5 21v-6m5 6v-6m-5 0h5"/></svg>
+      </div>
+      <div class="service-name">Brand Strategy</div>
+      <p class="service-desc">Positioning, messaging, and visual identity systems that make your brand impossible to ignore — and easy to remember.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-num">02</div>
+      <div class="service-icon" aria-hidden="true">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M3 13l4-4 4 4 4-7 4 4"/><path d="M3 20h18"/></svg>
+      </div>
+      <div class="service-name">Performance Media</div>
+      <p class="service-desc">Paid search, social, and programmatic campaigns built for efficiency. We optimize toward revenue, not vanity metrics.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-num">03</div>
+      <div class="service-icon" aria-hidden="true">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35M11 8v6M8 11h6"/></svg>
+      </div>
+      <div class="service-name">SEO &amp; GEO</div>
+      <p class="service-desc">Organic visibility for both traditional search and AI-powered engines. We make sure ChatGPT, Perplexity, and Google all know your brand.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-num">04</div>
+      <div class="service-icon" aria-hidden="true">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+      </div>
+      <div class="service-name">Content Systems</div>
+      <p class="service-desc">Editorial calendars, content briefs, and production pipelines that ship great content at scale without burning out your team.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-num">05</div>
+      <div class="service-icon" aria-hidden="true">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 17.5h7M17.5 14v7"/></svg>
+      </div>
+      <div class="service-name">Analytics &amp; CRO</div>
+      <p class="service-desc">Full-funnel attribution, dashboards you'll actually use, and A/B testing programs that compound over time.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-num">06</div>
+      <div class="service-icon" aria-hidden="true">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+      </div>
+      <div class="service-name">Influencer &amp; Creator</div>
+      <p class="service-desc">Creator partnerships with real ROI tracking — from micro-influencer seeding to large-scale ambassador programs.</p>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-section">
+  <div class="stats-inner">
+    <div class="stats-left">
+      <p class="section-label">By the numbers</p>
+      <h2 class="section-title">Results<br>that move<br>the needle.</h2>
+      <p class="stats-body" style="margin-top: 20px;">
+        We're not a branding shop that dabbles in ads. Every engagement starts with your revenue model and works backwards to the channels and tactics that drive it.
+      </p>
+    </div>
+    <div class="stats-grid">
+      <div class="stat-block">
+        <div class="stat-big">$140<em>M</em></div>
+        <div class="stat-caption">Revenue driven for clients in 2024</div>
+      </div>
+      <div class="stat-block">
+        <div class="stat-big">3.8<em>×</em></div>
+        <div class="stat-caption">Average blended ROAS across paid channels</div>
+      </div>
+      <div class="stat-block">
+        <div class="stat-big">200<em>+</em></div>
+        <div class="stat-caption">Brands scaled across D2C, SaaS, and B2B</div>
+      </div>
+      <div class="stat-block">
+        <div class="stat-big">94<em>%</em></div>
+        <div class="stat-caption">Client retention rate year over year</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- WORK -->
+<section class="section" id="work">
+  <div class="section-header">
+    <div>
+      <p class="section-label">Featured work</p>
+      <h2 class="section-title">Case studies</h2>
+    </div>
+    <a href="#" class="section-link">All work →</a>
+  </div>
+
+  <div class="case-card">
+    <div class="case-visual">
+      <div class="case-visual-text" aria-hidden="true">ORBIT</div>
+      <div class="case-label">E-Commerce · Apparel</div>
+    </div>
+    <div class="case-content">
+      <div>
+        <div class="case-tag">Case Study — Paid Media + SEO</div>
+        <h3 class="case-title">From $2M to $11M in 18 months</h3>
+        <p class="case-body">
+          Orbit came to us with strong product-market fit but a paid media program that was hemorrhaging margin. We rebuilt their attribution model, restructured their Google and Meta campaigns, and layered in organic SEO to reduce blended CAC by 41%.
+        </p>
+        <div class="case-result">5.6<em>×</em></div>
+        <div class="case-result-label">Return on ad spend, up from 1.9×</div>
+      </div>
+      <a href="#" class="case-link">Read the full case study</a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section" id="contact">
+  <div class="cta-head">
+    <p class="section-label">Ready to grow?</p>
+    <h2 class="cta-title">Let's build<br>something<br>worth<br>bragging about.</h2>
+  </div>
+  <div class="cta-right">
+    <a href="mailto:hello@vantage.marketing" class="btn-primary" style="font-size: 15px; padding: 16px 40px;">Start a project</a>
+    <p class="cta-email">hello@vantage.marketing</p>
+  </div>
+</section>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <span class="footer-logo">Vantage</span>
+    <ul class="footer-links">
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Work</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Privacy</a></li>
+    </ul>
+    <span class="footer-copy">© 2025 Vantage Marketing LLC</span>
+  </div>
+</footer>
