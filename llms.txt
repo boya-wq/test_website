@@ -4,3 +4,6 @@
 
 ## Sections
 - World: https://www.nytimes.com/section/world
+
+## Revision
+- Second call, same slug. This content proves the PR was UPDATED, not duplicated.
