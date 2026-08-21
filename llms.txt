@@ -1,0 +1,6 @@
+# The New York Times
+
+> Test fixture written by the Influcio GEO agent probe. Safe to delete.
+
+## Sections
+- World: https://www.nytimes.com/section/world
