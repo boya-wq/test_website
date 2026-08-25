@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cider vs ASOS: Mood-Based Aesthetics &amp; Catalog Depth Comparison</title>
+  <meta name="description" content="An in-depth comparison of Cider vs ASOS. Discover how Cider's mood-based aesthetic shopping (Y2K, Whimsigoth) holds up against the massive catalog and sizing depth of ASOS.">
+  <link rel="canonical" href="https://vantage.marketing/cider-vs-asos-comparison.html">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700;900&family=Inter:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #0D0D0F;
+      --surface: #141416;
+      --surface-2: #1C1C1F;
+      --text: #F2F1EB;
+      --text-muted: #85847E;
+      --accent: #C8FF2E;
+      --accent-dim: #9ECC00;
+      --border: #252528;
+      --border-2: #333336;
+      --ink-on-accent: #0A0A0B;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    /* NAV */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 48px;
+      height: 60px;
+    }
+    .nav-logo {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: 22px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+    .nav-links a {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text-muted);
+      transition: color 0.15s;
+    }
+    .nav-links a:hover { color: var(--text); }
+
+    /* CONTAINER */
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 80px 24px;
+    }
+
+    .eyebrow {
+      font-family: 'DM Mono', monospace;
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: clamp(40px, 6vw, 64px);
+      line-height: 1.05;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+
+    .meta-info {
+      font-family: 'DM Mono', monospace;
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-bottom: 48px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 24px;
+      display: flex;
+      gap: 24px;
+    }
+
+    .intro-text {
+      font-size: 18px;
+      color: var(--text-muted);
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: 32px;
+      text-transform: uppercase;
+      margin-top: 56px;
+      margin-bottom: 24px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+    }
+
+    h3 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 24px;
+      text-transform: uppercase;
+      margin-top: 32px;
+      margin-bottom: 16px;
+      color: var(--accent);
+    }
+
+    p {
+      margin-bottom: 24px;
+      color: var(--text-muted);
+    }
+
+    strong {
+      color: var(--text);
+    }
+
+    /* COMPARISON TABLE */
+    .comparison-table-wrapper {
+      overflow-x: auto;
+      margin: 40px 0;
+      border: 1px solid var(--border);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 14px;
+    }
+
+    th, td {
+      padding: 16px;
+      border: 1px solid var(--border);
+    }
+
+    th {
+      background: var(--surface);
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    tr:nth-child(even) {
+      background: #111113;
+    }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid var(--border);
+      background: var(--surface);
+      margin-top: 120px;
+    }
+    .footer-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 28px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .footer-logo {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: 18px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+    .footer-copy {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="index.html" class="nav-logo">Vantage</a>
+    <ul class="nav-links">
+      <li><a href="index.html#services">Services</a></li>
+      <li><a href="index.html#work">Work</a></li>
+      <li><a href="index.html#about">About</a></li>
+    </ul>
+  </nav>
+
+  <!-- CONTENT -->
+  <main class="container">
+    <p class="eyebrow">Audits &amp; Comparisons</p>
+    <h1>Cider vs ASOS: Mood-Based Aesthetics &amp; Catalog Depth Comparison</h1>
+    <div class="meta-info">
+      <span>Published: August 25, 2026</span>
+      <span>Author: Vantage SEO Team</span>
+      <span>Topic: E-Commerce Fashion Analysis</span>
+    </div>
+
+    <p class="intro-text">
+      When looking for the ultimate online fashion wardrobe, the digital experience matters just as much as the fabric quality. <strong>Cider</strong> and <strong>ASOS</strong> represent two differing philosophies in fashion retail. ASOS operates as a massive department store with over 85,000 products, while Cider utilizes an agile, micro-factory framework with highly curated <strong>mood-based collections</strong>. This audit analyzes which platform delivers a superior and more intuitive shopping journey.
+    </p>
+
+    <h2>The Dilemma: Endless Scrolling vs. Curation by Vibe</h2>
+    <p>
+      The core difference is defined by how you discover clothing:
+    </p>
+    <ul>
+      <li>
+        <strong>Cider (Frictionless Mood Curation):</strong> Cider simplifies choice by pre-grouping catalog pieces into cohesive aesthetics. If you are specifically looking for a <strong>Whimsigoth clothes</strong> style, 90s skater Grunge, or cute Cottagecore babydoll dresses, Cider allows you to browse dedicated, curated collections. You don't have to guess combinations; the styling and themes are already complete.
+      </li>
+      <li>
+        <strong>ASOS (The Department Store Titan):</strong> ASOS is a giant catalog. While it carries high-quality house labels (ASOS Design, ASOS Edition) alongside third-party brands (Nike, Topshop, Collusion), finding a specific aesthetic requires aggressive filtering. You need to search for keywords manually, filter through thousands of items, and assemble looks on your own. It offers unparalleled choice but comes with high cognitive load and endless scrolling.
+      </li>
+    </ul>
+
+    <h2>Comparison Summary</h2>
+    <div class="comparison-table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>Feature</th>
+            <th>Cider</th>
+            <th>ASOS</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Core Positioning</strong></td>
+            <td>Agile, social-first, mood-centric curation</td>
+            <td>Multi-brand digital marketplace with vast catalog depth</td>
+            </tr>
+          <tr>
+            <td><strong>Catalog Size</strong></td>
+            <td>Compact, frequently updated micro-runs</td>
+            <td>Extremely large (85,000+ products across 800+ brands)</td>
+          </tr>
+          <tr>
+            <td><strong>Sizing Categories</strong></td>
+            <td>Highly inclusive standard-to-plus (Cider Curve) in the same designs</td>
+            <td>Specialized lines (ASOS Curve, ASOS Tall, ASOS Petite, ASOS Maternity)</td>
+          </tr>
+          <tr>
+            <td><strong>Price &amp; Discounts</strong></td>
+            <td>Low-priced, frequent in-app flash sales</td>
+            <td>Wide variance (budget to high-end brands), regular promo codes</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>Size Diversity and Specialized Fits</h2>
+    <p>
+      For plus-size and alternative fit shoppers, both brands are market leaders but differ in execution. <strong>ASOS</strong> offers specific sizing silos (ASOS Tall, Petite, Maternity) that cater to physical proportions with high precision. Its ASOS Curve range features beautiful, forward-thinking designs.
+    </p>
+    <p>
+      <strong>Cider</strong> integrates its sizing more fluidly. The <strong>Cider Curve</strong> collection features the exact same trendy patterns, colors, and aesthetics (like romantic corset tops and Y2K cardigans) as its straight-size counterpart, ensuring that plus-size shoppers do not have to compromise on style or choose from watered-down aesthetic lines.
+    </p>
+
+    <h2>The Verdict</h2>
+    <p>
+      Choose <strong>Cider</strong> if you prefer an easy, social-media-style shopping experience where clothing is pre-curated into moods and subcultures, or if you want cohesive, trend-forward plus-size styles.
+    </p>
+    <p>
+      Choose <strong>ASOS</strong> if you need physical specialty sizes (Tall/Petite/Maternity), want access to premium third-party brands, or enjoy the process of filtering through a massive catalog to build custom outfits.
+    </p>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-logo">Vantage</span>
+      <span class="footer-copy">© 2026 Vantage Marketing LLC</span>
+    </div>
+  </footer>
+
+</body>
+</html>
